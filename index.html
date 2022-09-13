@@ -1,161 +1,31 @@
-<head>
-<meta charset="UTF-8">
-<title> Challenge</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Challenge</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<body>
+  <body>
 
-<div class='contenedor'> 
-  <div class='logo'>
-    <img class="logoimg" src="imagenes/logo.jpeg">
-    <h1 class="titulo">Encriptador de mensajes</h1>
-  </div>
-  <div class="left">
-    <h1>aca va el panel izquierdo</h1>
-  </div>
-  <div class="right">
-    <h1>aca va el panel derecho</h1>
-  </div>
-  <div class="left-button">
-    <h1>van unos botones</h1>
-  </div>
-</div>
-
-</body>
-<script>
-let texto = document.getElementById("texto");
-let encriptar = document.getElementById("encriptar");
-let desencriptar = document.getElementById("desencriptar");
-let resultado = document.getElementById("resultado");
-let fraseEncritada = "";
-
-function encriptar1(){
-
-    var nuevoTexto = "";
-    for (var indice = 0; indice < texto.length; indice++) {
-      
-        if(texto[indice] == "e"){
-           nuevoTexto = nuevoTexto + "enter"; 
-        } 
-        else if (texto[indice] == "i"){
-          nuevoTexto = nuevoTexto + "imes";
-        }    
-        else if (texto[indice] == "a"){
-          nuevoTexto = nuevoTexto + "ai";
-        }    
-        else if (texto[indice] == "o"){
-          nuevoTexto = nuevoTexto + "ober";
-        }    
-        else if (texto[indice] == "u"){
-          nuevoTexto = nuevoTexto + "ufat";
-        }    
-       else{ nuevoTexto = nuevoTexto + texto[indice]}          
-    }
-    
-    return nuevoTexto;
-}
-    console.log(encriptar1());
-
-
-/*
-
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-
-
-
-
-
-nombre.addEventListener('click', function(){
-    console.log('Que miercoles pasa?')
-}, true);  
-
-
-nombre2.addEventListener('click', () => {
-    console.log('Que miercoles pasa?')
-}, false);
-
-nombre2a.addEventListener('click', () => console.log('Que miercoles pasa?'));
-
-function funcion(){
-    console.log('Que miercoles pasa?')
-}
-
-nombre3.addEventListener('click', funcion);
-
-*/
-
-
-
-
-
-</script>
-
-
-
-
-                                               <!-- ETIQUETAS -->
-<!-- 
-* <br> = Salto de linea 
-* <h1> TITULO </h1> = Se abre y cierran las etiquetas H1, significa titulo
-* <a Href = "http://es.wikipedia.org/wiki/html"> </a> = Nos sirve para crear enlaces a otras paginas
-* <meta charset="UTF-8"> = Nos sirve para los navegadores que no reconocen los caracteres especiales
-* Al final de cada sentencia de java script se pone punto y coma
-* document.write("La edad de Christan es ..."); = Nos sirve para utilizar codigo html en java script
-* document.write("La edad de Christan es ...<br>"); = Nos sirve para utilizar codigo html en java script y agregamos un salto de pagina
-* document.write(25 + 8) = Me suma los dos valores
-* document.write("25" + 8)= Lo concatena, me toma los dos valores como string;
-* document.write("La suma de las edades de Juan, Pedro y Carlos es...<br>" + (20+25+15)); = Concateno texto con un salto de linea y una suma
-* var anho = 2030; = Declaro la variable la cual se utilizan en el calculo de edades de cada uno.
-* Math.round(promedio) = Declaro la var promedio y con la funcion math.round, redondeo el resultado
-* var saltoLinea = "<br><br><br>"= uso variables para no tener que repetir lineas de codigo
-* saltarLinea(); = de esta forma invoco la funcion
-* function imprimir(frase) = es una funcion que le pasamos como parametro la variable frase... y cuando invocamos la funcion, agregamos el texto(en este caso, puedo pasar textos, numeros etc) de lo que vamos a mostrar
-* alturaInformado = prompt("informa su altura"); = la funcion prompt nos permite interactuar con el usuario, en este caso, nos pide ingresar la altura.
-* parseInt = esta funcion nos convierte un numero(que nos devuelve en texto, el numero) a un numero, y si pasamos un texto con esta funcion aplicada, nos va a decir que no es un numero.
-*  if(){} = condiciones if.. si se cumple dicha condicion, la funcion retornara un bolean..
-* Math.random(); = Es una funcion que nos devuelve un numero random entre 0 y 1
-* Math.round(); = es una funcion que nos redondea el numero con decimales que le pasamos.
-* break; = nos permite cortar el while, cuando se cumple el if de acerto... es una funcion de salida. Es como si fuera una tijera o un freno donde le diga: "llegó aquí", va a buscar, en la parte de arriba va a subir, 
-  si hay un while y va a cortar el while. Independientemente si está en la primera, la segunda, la tercera o la mil iteración se va a salir 
-  del while y va a continuar después de lo que tengamos en la llave que cierra el flujo, la parte de nuestro while.
-* <input/> = Nos permite crear un campo de texto, en el cual podemos ingresar por pantalla en html
-* document.querySelector("input");= con esto capturamos el valor que ingresamos en el input
-*  button.onclick = verificar; = llamamos a la funcion (sin los parentesis) verificar, esto toma lo que ingresamos por teclado y compara en el if de la funcion
-* input.focus(); = Nos deja el cursor en el input para poder seguir probando, o apenas cargamos el programa se posiciona
-* input.value = ""; = nos limpia el campo cada vez que no acertamos.
-* secretos.length = nos dice el largo del array
-* console.log(secretos) = es una forma de ver en la pantalla del navegador variables y que retorna la misma.
-* secretos.push(numeroAleatorio); = el push se utiliza con los array, para ingresarle los valores al mismo
--->
-
-<!-- 
-* Por convenio las etiquetas se ponen en minuscula h1, br, etc
-* El codigo html es estatico, el codigo java script es dinamico(acepta variables)
-* La ventaja es que con el document.write podemos pasar al resultado de un cálculo y, entre otras cosas, de manera dinámica ya que el
-  mundo HTML no es capaz de realizar operaciones matemáticas.
-* no es posible escribir instrucciones de JavaScript en el mundo HTML, HTML no entiende que debe mostrar el texto pasado por la instrucción, 
-  tan solo imprime la instrucción y no su resultado.
-* Es secuencial, el codigo de ejecuta de arriba hacia abajo.. es por eso que primero toma el primer valor de anhio y despues cambia al siguiente.
-* funciones dentro de programación no es más que un código que recibe instrucciones que puede o no recibir algunos parámetros de entrada,
-  o sea, inputs de algunas informaciones y nos devuelve un resultado.
-* Las funciones deben tener nombres de verbos 
-* Las llaves significan el inicio y el fin de nuestra función. Todo lo que coloquemos aquí adentro van a ser las instrucciones que esa
-  función va a realizar, y en nuestro caso voy a colocar que nuestra función va a ser document write BR. Punto y coma. Otra convención, 
-  otra buena práctica es la identación, identar nuestro código, igual dentro de las funciones.
-* Entonces la buena práctica aprendida es crear funciones objetivas que realicen en máximo una sola acción, un solo cálculo y que nos 
-  retornen un valor y yo pueda reutilizar esa función en diferentes situaciones.  
-* input, que va a ser nuestro comunicador entre el código JavaScript que está aquí y el código HTML que lo tenemos encima, recordando 
-  que le estamos pidiendo los valores y ejecuciones aquí en el código HTML y tenemos que hacer que ese código HTML se converse con nuestro código JavaScript aquí.
-* querySelector. Aquí recordando, la S puntualizando siempre tiene que ser con mayúscula. QuerySelector, y le doy como parámetro
- el nombre de la etiqueta que quiero rescatar. En este caso, es input, input, que es esta etiqueta input 
-* para listar todos los valores de un array =                var heroes = ["Superman", "Thor", "Batman", "Mujer Maravilla"];
-                                                                  for( var i = 0; i < heroes.length; i++) {
-  EN ESTA LINEA VEMOS COMO MOSTRAR CADA OBJETO DEL ARRAY- - ->   alert(heroes[i]);
-                                                }
-
--->
+    <div class='contenedor'> 
+       <div class='logo'>
+         <img class="logoimg" src="imagenes/logo.jpeg">
+         <h1 class="titulo">Encriptador de mensajes</h1>
+       </div>
+       <div class="left">
+         <input class="text-input" type="text" placeholder="Ingrese el texto aqui">
+       </div>
+       <div class="right">
+         <img src="imagenes/lupa.jpeg" id="imgDer">
+         <h1 id="texto">Ningun mensaje fue encontrado</h1>
+         <textarea id="texto2" name="name" rows="8" cols="80">Ingrese el texto que desees encriptar o desencriptar</textarea>
+       </div>
+       <div class="left-button">
+         <p>Solo minusculas y sin acentos</p>
+         <button type="button" id="btn-encriptar">Encriptar</button>
+         <button type="button" id="btn-desencriptar">Desencriptar</button>
+       </div>
+    </div>
+   
+  </body>
+</html>
