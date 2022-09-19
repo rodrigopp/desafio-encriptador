@@ -1,6 +1,6 @@
 
 function encriptar() {
-    var texto = document.getElementById("inputTexto").ariaValueMax.toLowerCase();
+    var texto = document.getElementById("inputTexto").value.toLowerCase();
     var nuevoTexto = "";
     for (var indice = 0; indice < texto.length; indice++) {
       
@@ -22,14 +22,39 @@ function encriptar() {
        else{ nuevoTexto = nuevoTexto + texto[indice]}          
     }
     
-    document.getElementById("imgDer").style.display = none;
-    document.getElementById("texto").style.display = none;
+    document.getElementById("imgDer").style.display = "none";
+    document.getElementById("texto").style.display = "none";
     document.getElementById("texto2").innerHTML=nuevoTexto;
     document.getElementById("copiar").style.display = "show";
     document.getElementById("copiar").style.display = "inherit";
 
 
     return nuevoTexto;
+}
+
+function desencriptar() {
+    var texto = document.getElementById("inputTexto").value.toLowerCase();
+
+    var texCifrado = texto.replace(/enter/igm, "e");
+    var texCifrado = texCifrado.replace(/ober/igm, "o");
+    var texCifrado = texCifrado.replace(/imes/igm, "i");
+    var texCifrado = texCifrado.replace(/ai/igm, "a");
+    var texCifrado = texCifrado.replace(/ufat/igm, "u");
+
+    document.getElementById("imgDer").style.display = "none";
+    document.getElementById("texto").style.display = "none";
+    document.getElementById("texto2").innerHTML=texCifrado;
+    document.getElementById("copiar").style.display = "show";
+    document.getElementById("copiar").style.display = "inherit";
+
+}
+
+function copiar() {
+    var contenido = document.querySelector("#texto2");
+    contenido.select();
+    document.execCommand("copy");
+    alert("se copio");
+
 }
 
 
